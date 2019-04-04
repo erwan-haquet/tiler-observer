@@ -33,7 +33,7 @@ function onMessageHandler(channel, userstate, message, self) {
     // const username = userstate.username;
 
     // console.log(`${username}: ${formattedMessage}`);
-    console.log(userstate);
+    console.log(message);
 }
 
 // Called every time the bot connects to Twitch chat
