@@ -1,10 +1,10 @@
+const broker  = require('../broker');
 const Message = require('../model/Message.js');
 
 function MessageEventHandler(channel, userstate, msg, self) {
-    // Ignore messages from the bot
     if (self) {
         return;
-    }
+    } // Ignore messages from the bot
 
     const message = new Message({
         msg: msg.trim(),
@@ -13,7 +13,7 @@ function MessageEventHandler(channel, userstate, msg, self) {
         userId: userstate['user-id']
     });
 
-    console.log(message);
+    broker.publish('message', message);
 }
 
 module.exports = MessageEventHandler;

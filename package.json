@@ -1,15 +1,15 @@
 {
-  "name": "twitch_scrutinizer_client_listener",
+  "name": "twitch-scrutinizer-client-listener",
   "version": "1.0.0",
   "description": "A simple twitch chat listener",
   "author": "Erwan Haquet <ehaquet.dev@gmail.com>",
-  "main": "bot.js",
   "scripts": {
-    "start": "node app/bot.js"
+    "start": "node src/bot.js"
   },
   "dependencies": {
     "dotenv": "7.0.0",
     "path": "^0.12.7",
+    "rascal": "^4.2.3",
     "tmi.js": "1.4.2"
   }
 }

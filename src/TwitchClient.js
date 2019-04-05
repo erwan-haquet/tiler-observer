@@ -1,6 +1,6 @@
 const tmi = require('tmi.js');
 
-const opts = {
+const options = {
     identity: {
         username: process.env.TWITCH_BOT_USERNAME,
         password: process.env.TWITCH_OAUTH_TOKEN
@@ -10,7 +10,6 @@ const opts = {
     ]
 };
 
-// Create the client
-const client = new tmi.client(opts);
+const twitchClient = new tmi.client(options);
 
-module.exports = client;
+module.exports = twitchClient;

@@ -18,8 +18,8 @@ A simple javascript twitch bot, which is responsible to listen some twitch chats
 
 1) Clone the repository
 
-> git clone git@github.com:erwan-haquet/twitch-scrutinizer-client-listener.git   
-> cd twitch-scrutinizer-client-listener
+> git clone git@github.com:erwan-haquet/twitch-scrutinizer-twitchClient-listener.git   
+> cd twitch-scrutinizer-twitchClient-listener
 
 2) Copy the `.env.local` to `.env` and fill it with your informations.
 
