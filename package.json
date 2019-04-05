@@ -5,10 +5,11 @@
   "author": "Erwan Haquet <ehaquet.dev@gmail.com>",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node app/bot.js"
   },
   "dependencies": {
     "dotenv": "7.0.0",
+    "path": "^0.12.7",
     "tmi.js": "1.4.2"
   }
 }
