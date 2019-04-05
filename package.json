@@ -7,9 +7,9 @@
     "start": "node src/bot.js"
   },
   "dependencies": {
+    "amqplib": "^0.5.3",
     "dotenv": "7.0.0",
     "path": "^0.12.7",
-    "rascal": "^4.2.3",
     "tmi.js": "1.4.2"
   }
 }
