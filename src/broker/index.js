@@ -12,8 +12,12 @@ function publish(queue, message) {
     amqp.then(function (conn) {
         return conn.createChannel();
     }).then(function (channel) {
-        return channel.assertQueue(queue, {durable: false}).then(function () {
-            channel.sendToQueue(queue, new Buffer.from(JSON.stringify(message)));
+        return channel.assertQueue(queue, {durable: true}).then(function () {
+            channel.sendToQueue(queue, new Buffer.from(JSON.stringify(message)), {
+                headers: {
+                    type: 'App\\Message\\Message'
+                }
+            });
             console.log(message.msg)
         });
     }).catch(console.warn);
