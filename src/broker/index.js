@@ -15,7 +15,7 @@ function publish(queue, message) {
         return channel.assertQueue(queue, {durable: true}).then(function () {
             channel.sendToQueue(queue, new Buffer.from(JSON.stringify(message)), {
                 headers: {
-                    type: 'App\\Message\\PostMessage'
+                    action: 'postMessage'
                 }
             });
             console.log(message.msg)
