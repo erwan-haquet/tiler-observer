@@ -4,21 +4,21 @@ const amqp = require('amqplib').connect(config.connector);
 /**
  * Publish a message to the broker
  *
- * @param queue {string} The name of the queue which will receive the message
- * @param message
+ * @param body
+ * @param event {string} A valid EventName is required
  */
-function publish(queue, message) {
+function publish(body, event) {
 
     amqp.then(function (conn) {
         return conn.createChannel();
     }).then(function (channel) {
-        return channel.assertQueue(queue, {durable: true}).then(function () {
-            channel.sendToQueue(queue, new Buffer.from(JSON.stringify(message)), {
+        return channel.assertQueue(process.env.RABBITMQ_QUEUE, {durable: true}).then(function () {
+            channel.sendToQueue(process.env.RABBITMQ_QUEUE, new Buffer.from(JSON.stringify(body)), {
                 headers: {
-                    action: 'postMessage'
+                    event: event
                 }
             });
-            console.log(message.msg)
+            console.log(body.msg)
         });
     }).catch(console.warn);
 
