@@ -13,7 +13,7 @@ function MessageEventHandler(channel, userstate, msg, self) {
         userId: userstate['user-id']
     });
 
-    broker.publish(message, 'messagePosted');
+    broker.publish(message, 'postMessage');
 }
 
 module.exports = MessageEventHandler;
