@@ -1,11 +1,11 @@
 # Client listener [Twitch Scrutinizer]
 
 ## Project overview 
-Twitch scrutinizer is an [Erwan Haquet](https://github.com/erwan-haquet) side-project.
+Twitch scrutinizer is a [Erwan Haquet](https://github.com/erwan-haquet) side-project.
 The main goal is to learn a bunch of new cool tools like Symfony 4, Api plateform, RabbitMQ, ReactJS...
 
-#### Client listener 
-A simple javascript twitch bot, which is responsible to listen some twitch chats and send every messages to RabbitMQ.
+#### Chat listener 
+A javascript twitch bot which is responsible for listening twitch chats and redirect formatted events to RabbitMQ.
 
 ## Installation
 
