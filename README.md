@@ -2,7 +2,7 @@
 
 ## Project overview 
 Twitch scrutinizer is a [Erwan Haquet](https://github.com/erwan-haquet) side-project.
-The main goal is to learn a bunch of new cool tools like Symfony 4, Api plateform, RabbitMQ, ReactJS...
+The goals are to **learn a bunch of new cool tools** like Symfony 4, Mercure, RabbitMQ, ReactJS, ElasticSearch... **use new concepts** like CQRS / Event sourcing and **enjoy coding** :)
 
 #### Chat listener 
 A javascript twitch bot which is responsible for listening twitch chats and redirect formatted events to RabbitMQ.
@@ -29,4 +29,7 @@ A javascript twitch bot which is responsible for listening twitch chats and redi
  > npm start
  
 5) That's it :D
+
+## Documentation
+TODO 
 
