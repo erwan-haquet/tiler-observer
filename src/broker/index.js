@@ -5,9 +5,9 @@ const amqp = require('amqplib').connect(config.connector);
  * Publish a message to the broker
  *
  * @param body
- * @param event {string} A valid EventName is required
+ * @param action {string} A valid action is required
  */
-function publish(body, event) {
+function publish(body, action) {
 
     amqp.then(function (conn) {
         return conn.createChannel();
@@ -15,7 +15,7 @@ function publish(body, event) {
         return channel.assertQueue(process.env.RABBITMQ_QUEUE, {durable: true}).then(function () {
             channel.sendToQueue(process.env.RABBITMQ_QUEUE, new Buffer.from(JSON.stringify(body)), {
                 headers: {
-                    event: event
+                    action: action
                 }
             });
             console.log(body.msg)
