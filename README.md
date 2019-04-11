@@ -1,11 +1,12 @@
-# Client listener [Twitch Scrutinizer]
+# TILER Observer
 
 ## Project overview 
-Twitch scrutinizer is a [Erwan Haquet](https://github.com/erwan-haquet) side-project.
-The goals are to **learn a bunch of new cool tools** like Symfony 4, Mercure, RabbitMQ, ReactJS, ElasticSearch... **use new concepts** like CQRS / Event sourcing and **enjoy coding** :)
+TILER for Twitch scrutinizer is a [Erwan Haquet](https://github.com/erwan-haquet) side-project.   
+Goals are to **learn a bunch of new cool tools** like Symfony 4, Mercure, RabbitMQ, ReactJS, ElasticSearch... **use new concepts** like CQRS / Event sourcing and **enjoy coding** :)   
+If you want to learn more, check out the [main repository](https://github.com/erwan-haquet/tiler-box).
 
-#### Chat listener 
-A javascript twitch bot which is responsible for listening twitch chats and redirect formatted events to RabbitMQ.
+#### Observer service
+A javascript twitch bot which is responsible for listening twitch chats and redirect event as formatted commands to [Orchestrator service](https://github.com/erwan-haquet/tiler-orchestrator).
 
 ## Installation
 
@@ -16,10 +17,16 @@ A javascript twitch bot which is responsible for listening twitch chats and redi
 
 #### Get started
 
+##### Option 1
+
+Go to the main [main repository](https://github.com/erwan-haquet/tiler-box), and use the docker infrastructure with all services included.
+
+##### Option 2
+
 1) Clone the repository
 
-> git clone git@github.com:erwan-haquet/twitch-scrutinizer-chat-listener.git   
-> cd twitch-scrutinizer-chat-listener
+> git clone git@github.com:erwan-haquet/tiler-orchestrator.git
+> cd tiler-orchestrator
 
 2) Copy the `.env.local` to `.env` and fill it with your informations.
 
