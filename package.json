@@ -1,5 +1,5 @@
 {
-  "name": "tiler-observer",
+  "name": "twyzer-observer",
   "version": "1.0.0",
   "description": "A simple twitch chat listener",
   "author": "Erwan Haquet <ehaquet.dev@gmail.com>",
