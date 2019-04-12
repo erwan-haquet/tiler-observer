@@ -1,4 +1,4 @@
-class Message {
+class ReceivedMessage {
 
     // Read more about userstate here => https://dev.twitch.tv/docs/irc/tags#privmsg-twitch-tags
     constructor({channel, msg, userstate}) {
@@ -6,6 +6,7 @@ class Message {
         // Message
         this.messageId = userstate.id;
         this.message = msg;
+        this.messageType = userstate['message-type'];
         this.emotes = userstate.emotes;
 
         // User
@@ -21,4 +22,4 @@ class Message {
     }
 }
 
-module.exports = Message;
+module.exports = ReceivedMessage;
