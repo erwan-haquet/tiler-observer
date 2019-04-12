@@ -6,14 +6,12 @@ function MessageEventHandler(channel, userstate, msg, self) {
         return;
     } // Ignore messages from the bot
 
-    const message = new Message({
-        msg: msg.trim(),
-        username: userstate['username'],
-        displayName: userstate['display-name'],
-        userId: userstate['user-id']
-    });
 
-    broker.publish(message, 'postMessage');
+    // log the message for visualization
+    console.log(msg);
+
+    // send the message to the broker
+    broker.publish(new Message({channel, userstate, msg}), 'postMessage');
 }
 
 module.exports = MessageEventHandler;
